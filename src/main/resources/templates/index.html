@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Intenções</title>
+<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet" />
+<link th:href="@{/webjars/bootstrap/css/bootstraptheme.min.css}"
+	rel="stylesheet" />
+
+<style>
+.logo-container {
+	background-color: #000000;
+	color: #fff;
+}
+</style>
+
+</head>
+<body>
+	<div class="container">
+		<div class="w-auto p-3 mt-3 logo-container">Intenções de financiamento</div>
+		<div>
+			<h1 class="display-6">Intenções de financiamento</h1>
+		</div>
+		<form th:action="@{/novo-produto}">
+			<div>
+				<button type="submit" class="btn btn-light">Nova intenção</button>
+			</div>
+		</form>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Cliente</th>
+					<th scope="col">Tipo financiamento</th>
+					<th scope="col">Valor intenção</th>
+					<th scope="col">Quantidade parcelamentos</th>
+					<th class="text-center" scope="col">Ação</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="intencao : ${intencoes}">
+					<td th:text="${intencao.cliente}"></td>
+					<td th:text="${intencao.tipoFinanciamento}"></td>
+					<td th:text="${intencao.valor}"></td>
+					<td th:text="${intencao.qtdParcelamentos}"></td>
+					<td class="text-center">
+						<a th:href="@{/intencao/{id}(id = ${intencao.id})}" class="btn btn-primary">Detalhar</a>
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	
+	</div>
+
+	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>
