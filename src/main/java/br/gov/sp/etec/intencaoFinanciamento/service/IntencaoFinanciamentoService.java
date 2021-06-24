@@ -7,4 +7,6 @@ import br.gov.sp.etec.intencaoFinanciamento.dto.IntencaoFinanciamento;
 public interface IntencaoFinanciamentoService {
 	List<IntencaoFinanciamento> listaIntencoes();
 	IntencaoFinanciamento salvarIntencao(IntencaoFinanciamento intencao);
+	IntencaoFinanciamento editarIntencao(Long id);
+	void excluirIntencao(Long id);
 }

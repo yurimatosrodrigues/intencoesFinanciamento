@@ -30,6 +30,7 @@ public class EstadoServiceImpl implements EstadoService {
 		List<Estado> listaEstados = new ArrayList<>();
 		for(EstadoEntity entity : estadoEntity) {
 			Estado estado = new Estado();
+			estado.setId(entity.getId());
 			estado.setUF(entity.getUF());
 			estado.setNome(entity.getNome());
 			listaEstados.add(estado);	

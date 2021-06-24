@@ -15,6 +15,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tb_estado")
 public class EstadoEntity {	
+	
 	@Id
 	@Column(name = "id_estado")
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SEG_ESTADO")
@@ -23,11 +24,11 @@ public class EstadoEntity {
 	
 	@OneToMany(mappedBy = "enderecoEstado")
 	private List<IntencaoFinanciamentoEntity> intencao;	
+	
 		
 	public List<IntencaoFinanciamentoEntity> getIntencao() {
 		return intencao;
-	}
-	
+	}	
 	public void setIntencao(List<IntencaoFinanciamentoEntity> intencao) {
 		this.intencao = intencao;
 	}

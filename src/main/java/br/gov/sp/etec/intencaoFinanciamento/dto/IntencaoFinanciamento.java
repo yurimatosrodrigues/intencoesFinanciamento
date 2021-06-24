@@ -14,7 +14,6 @@ public class IntencaoFinanciamento implements Serializable{
 	private int enderecoNumero;
 	private String enderecoCidade;
 	private Estado enderecoEstado;
-	//private String enderecoEstado;
 	private String enderecoCEP;
 	private String cpfCliente;
 	private String rgCliente;
@@ -23,7 +22,6 @@ public class IntencaoFinanciamento implements Serializable{
 	private String contatoTelefone;
 	private String contatoCelular;
 	private TipoFinanciamento tipoFinanciamento;
-	//private Long tipoFinanciamento;
 	private int qtdParcelas;
 	private Double valorIntencao;
 	private Double salarioCliente;
@@ -64,12 +62,7 @@ public class IntencaoFinanciamento implements Serializable{
 	public void setEnderecoEstado(Estado enderecoEstado) {
 		this.enderecoEstado = enderecoEstado;
 	}
-	/*public String getEnderecoEstado() {
-		return enderecoEstado;
-	}
-	public void setEnderecoEstado(String enderecoEstado) {
-		this.enderecoEstado = enderecoEstado;
-	}*/
+	
 	public String getEnderecoCEP() {
 		return enderecoCEP;
 	}
@@ -118,13 +111,6 @@ public class IntencaoFinanciamento implements Serializable{
 	public void setTipoFinanciamento(TipoFinanciamento tipoFinanciamento) {
 		this.tipoFinanciamento = tipoFinanciamento;
 	}
-
-	/*public Long getTipoFinanciamento() {
-		return tipoFinanciamento;
-	}
-	public void setTipoFinanciamento(Long tipoFinanciamento) {
-		this.tipoFinanciamento = tipoFinanciamento;
-	}*/
 	public int getQtdParcelas() {
 		return qtdParcelas;
 	}

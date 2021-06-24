@@ -25,7 +25,7 @@
 		<div>
 			<h1 class="display-6">Intenções de financiamento</h1>
 		</div>
-		<form th:action="@{/novo-produto}">
+		<form th:action="@{/nova-intencao}">
 			<div>
 				<button type="submit" class="btn btn-light">Nova intenção</button>
 			</div>
@@ -43,10 +43,10 @@
 			</thead>
 			<tbody>
 				<tr th:each="intencao : ${intencoes}">
-					<td th:text="${intencao.cliente}"></td>
+					<td th:text="${intencao.nomeCliente}"></td>
 					<td th:text="${intencao.tipoFinanciamento}"></td>
-					<td th:text="${intencao.valor}"></td>
-					<td th:text="${intencao.qtdParcelamentos}"></td>
+					<td th:text="${intencao.valorIntencao}"></td>
+					<td th:text="${intencao.qtdParcelas}"></td>
 					<td class="text-center">
 						<a th:href="@{/intencao/{id}(id = ${intencao.id})}" class="btn btn-primary">Detalhar</a>
 						
